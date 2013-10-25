@@ -1,3 +1,9 @@
+/**
+ * This file represents a main gruntfile for
+ * a large project. By allowing for external
+ * grunt tasks, devs can tinker without having
+ * to commit to their branch.
+ */
 module.exports = function (grunt) {
     grunt.initConfig({
         uglify: {
@@ -10,6 +16,9 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
+    // These two empty tasks can be used by
+    //   custom tasks to integrate easily into
+    //   a larger project.
     grunt.registerTask('custom-lib-pre', []);
     grunt.registerTask('custom-lib-post', []);
     grunt.registerTask('default', [
@@ -18,5 +27,7 @@ module.exports = function (grunt) {
         'custom-lib-post'
     ]);
 
-    grunt.loadTasks('./tasks');
+    // By loading last, all custom tasks can
+    //   override project-specific tasks.
+    grunt.loadTasks('tasks');
 };
