@@ -1,17 +1,21 @@
 {
-  "name": "grunt-read",
-  "version": "0.0.0",
-  "description": "",
-  "main": "gruntfile.js",
+  "name": "external-grunt-task-example",
+  "version": "0.1.0",
+  "description": "Bare bones example of Grunt with tasks loaded from external files.",
+  "main": "source/inheritance-example.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "grunt"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cobbdb/external-grunt-task-example.git"
+  },
+  "author": "Dan Cobb",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "grunt-cli": "~0.1.9",
-    "grunt-contrib-jshint": "~0.6.4",
-    "grunt": "~0.4.1",
-    "grunt-contrib-watch": "~0.5.3"
+    "grunt-cli": "0.1.9",
+    "grunt": "0.4.1",
+    "grunt-contrib-uglify": "0.2.4",
+    "grunt-contrib-jshint": "0.7.0"
   }
 }

@@ -15,4 +15,7 @@ module.exports = function (grunt) {
         }
     });
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.registerTask('custom-lib-pre', [
+        'jshint'
+    ]);
 };
